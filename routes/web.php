@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+// Tareas
+$router->get('/tareas', 'TareaController@index');
+$router->post('/tareas', 'TareaController@store');
+$router->get('/tareas/{id}', 'TareaController@show');
+$router->put('/tareas/{id}', 'TareaController@update');
+$router->delete('/tareas/{id}', 'TareaController@destroy');
